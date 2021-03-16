@@ -1,0 +1,19 @@
+{
+  "profileName": "stg",
+  "jobId": "7b2e0211-ac12-4824-8417-f8d11e1dfdd7",
+  "projectId": "98954.35001770958",
+  "time": "2021-03-09T14:32:56.167Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Creating Resource Group ...",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 89d49af4-fb50-4c1a-aa16-964e42ceef82",
+    "> Create App Registration Success! ID: 89d49af4-fb50-4c1a-aa16-964e42ceef82",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "{\"stack\":\"Error: Bot is not valid. Errors: The bot name is already registered to another bot application..  See https://aka.ms/bot-requirements for detailed requirements.\\n    at new t (C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:16:37408)\\n    at C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:18:103741\",\"message\":\"Bot is not valid. Errors: The bot name is already registered to another bot application..  See https://aka.ms/bot-requirements for detailed requirements.\",\"code\":\"InvalidBotData\",\"statusCode\":400,\"request\":{\"body\":\"{\\\"location\\\":\\\"global\\\",\\\"sku\\\":{\\\"name\\\":\\\"F0\\\"},\\\"kind\\\":\\\"bot\\\",\\\"properties\\\":{\\\"displayName\\\":\\\"consumerbot\\\",\\\"endpoint\\\":\\\"https://consumerbot.azurewebsites.net/api/messages\\\",\\\"msaAppId\\\":\\\"89d49af4-fb50-4c1a-aa16-964e42ceef82\\\"}}\"},\"response\":{\"body\":\"{\\\"error\\\":{\\\"code\\\":\\\"InvalidBotData\\\",\\\"message\\\":\\\"Bot is not valid. Errors: The bot name is already registered to another bot application..  See https://aka.ms/bot-requirements for detailed requirements.\\\"}}\"},\"body\":{}}",
+    "{\"name\":\"BOT_REGISTRATION_ERROR\",\"message\":\"Error - Bot is not valid. Errors: The bot name is already registered to another bot application..  See https://aka.ms/bot-requirements for detailed requirements.\",\"stack\":\"Error\\n    at new n (C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:18:97996)\\n    at Object.t.createCustomizeError (C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:18:98326)\\n    at e.<anonymous> (C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:479:33482)\\n    at C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:479:12347\\n    at Object.throw (C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:479:12452)\\n    at s (C:\\\\Program Files\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\lib\\\\node\\\\index.js:479:11217)\"}",
+    "BOT_REGISTRATION_ERROR - Error - Bot is not valid. Errors: The bot name is already registered to another bot application..  See https://aka.ms/bot-requirements for detailed requirements.\n        detail message can see provision.stg.log in your bot folder"
+  ]
+}

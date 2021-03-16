@@ -1,0 +1,193 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "EmptyBot-3",
+      "description": "",
+      "id": "dSUP3U"
+    }
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "859266",
+                    "name": "Send a response"
+                  },
+                  "activity": "${SendActivity_Welcome()}"
+                },
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "3X56c3"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_3X56c3()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true
+                  },
+                  "property": "dialog.choice",
+                  "style": "heroCard",
+                  "choices": [
+                    "Authenticate now",
+                    "Skip"
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "5bprfD"
+                  },
+                  "condition": "dialog.choice==\"Skip\"",
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.OAuthInput",
+                      "$designer": {
+                        "id": "vyKHM1"
+                      },
+                      "timeout": 900000,
+                      "maxTurnCount": 3,
+                      "allowInterruptions": true,
+                      "connectionName": "auth1",
+                      "text": "Sign in",
+                      "title": "Login",
+                      "property": "dialog.token"
+                    },
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "EYVGfJ"
+                      },
+                      "activity": "${SendActivity_EYVGfJ()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "zkETgi"
+                      },
+                      "activity": "${SendActivity_zkETgi()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "0EkiCP"
+                      },
+                      "activity": "${SendActivity_0EkiCP()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "aPLCJD"
+                      },
+                      "property": "user.lis",
+                      "value": {
+                        "a": "b"
+                      }
+                    },
+                    {
+                      "$kind": "Microsoft.BeginSkill",
+                      "$designer": {
+                        "id": "oSTE5h"
+                      },
+                      "activityProcessed": true,
+                      "botId": "=settings.MicrosoftAppId",
+                      "skillHostEndpoint": "=settings.skillHostEndpoint",
+                      "connectionName": "=settings.connectionName",
+                      "allowInterruptions": true,
+                      "skillEndpoint": "=settings.skill['emptyBot2'].endpointUrl",
+                      "skillAppId": "=settings.skill['emptyBot2'].msAppId",
+                      "activity": "${BeginSkill_Activity_oSTE5h()}"
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "leRIPJ"
+                      },
+                      "activity": "${SendActivity_leRIPJ()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "Wex6DU"
+                      },
+                      "property": "dialog.token",
+                      "value": "=null"
+                    },
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "XbHg7Y"
+                      },
+                      "property": "user.lis",
+                      "value": {
+                        "a": "b",
+                        "c": "d"
+                      }
+                    },
+                    {
+                      "$kind": "Microsoft.BeginSkill",
+                      "$designer": {
+                        "id": "Qql0b6"
+                      },
+                      "activityProcessed": true,
+                      "botId": "=settings.MicrosoftAppId",
+                      "skillHostEndpoint": "=settings.skillHostEndpoint",
+                      "connectionName": "=settings.connectionName",
+                      "allowInterruptions": true,
+                      "skillEndpoint": "=settings.skill['emptyBot2'].endpointUrl",
+                      "skillAppId": "=settings.skill['emptyBot2'].msAppId",
+                      "activity": "${BeginSkill_Activity_Qql0b6()}"
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "g2YaZw"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "EmptyBot-3.lg",
+  "id": "EmptyBot-3",
+  "recognizer": "EmptyBot-3.lu.qna"
+}

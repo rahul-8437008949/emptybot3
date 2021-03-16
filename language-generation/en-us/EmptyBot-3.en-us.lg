@@ -1,0 +1,35 @@
+[import](common.lg)
+
+# SendActivity_Welcome
+- ${WelcomeUser()}
+
+# UpdateActivity_Activity_kjBAQO()
+- [
+# ChoiceInput_Prompt_3X56c3()
+- Authenticate
+# UpdateActivity_Activity_Kzl0c7()
+[Activity
+attachments=${user.list}
+]
+# UpdateActivity_Activity_saBC7O()
+-hello
+# SendActivity_leRIPJ()
+- Switching to slave Bot
+# BeginSkill_Activity_oSTE5h()
+[Activity
+	Attachments=${user.lis}
+    text=${dialog.token.token}
+    ]
+# BeginSkill_Activity_Qql0b6()
+[Activity
+	Attachments=${user.lis}
+    text=${dialog.token}
+    ]
+# SendActivity_ahAfOK()
+- hello
+# SendActivity_0EkiCP()
+- Switching to slave Bot
+# SendActivity_EYVGfJ()
+- ${dialog.token.token}
+# SendActivity_zkETgi()
+- Authenticated in main bot
